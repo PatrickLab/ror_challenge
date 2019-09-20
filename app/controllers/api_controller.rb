@@ -3,7 +3,7 @@
 class ApiController < ApplicationController
   protected
     def current_user
-      @user ||= User.find(request.headers["USER_ID"])
+      @user ||= User.find(request.headers["USER-ID"])
     end
 
     def authenticate_user!
